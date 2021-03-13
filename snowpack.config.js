@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: ['@snowpack/plugin-typescript'],
   optimize: {
+    entrypoints: ['src/index.ts'],
     bundle: true,
     minify: true,
   },
