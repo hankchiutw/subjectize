@@ -1,3 +1,4 @@
+import { expect } from '@esm-bundle/chai';
 import { ReplaySubject } from 'rxjs';
 import { Subjectize } from './subjectize';
 import { SubjectizeProps } from './subjectize-props';
@@ -15,7 +16,7 @@ describe('Subjectize', () => {
     const expectedValue = 99;
     obj.prop1 = expectedValue;
     obj.prop1$.subscribe((value) => {
-      expect(value).toBe(expectedValue);
+      expect(value).equal(expectedValue);
       done();
     });
   });
@@ -40,7 +41,7 @@ describe('Subjectize', () => {
     let count = 0;
     obj.prop12$.subscribe({
       next: ([key, value]) => {
-        expect(value).toBe(expectedValue[key]);
+        expect(value).equal(expectedValue[key]);
         count++;
         if (count === 2) {
           done();
@@ -67,7 +68,7 @@ describe('Subjectize', () => {
     const expectedValue = 99;
     obj.prop1 = expectedValue;
     obj.prop1$.subscribe((value) => {
-      expect(value).toBe(expectedValue);
+      expect(value).equal(expectedValue);
       done();
     });
   });

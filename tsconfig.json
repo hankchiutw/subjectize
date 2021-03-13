@@ -16,7 +16,7 @@
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
     "noEmit": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
