@@ -10,11 +10,6 @@
     execa "^5.0.0"
     npm-run-path "^4.0.1"
 
-"@types/canvas-confetti@^1.0.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@types/canvas-confetti/-/canvas-confetti-1.3.0.tgz#c2ea6b4c280832e134cb98ea3b84775febc53b63"
-  integrity sha512-vfShQvbd7XD+jT2bFTju5oALkzI5uMO7RGH8RYOTP8p5LiY9NXSr0fJp2BvfW36Qf8807ma/yev0aS5GRwQcFg==
-
 "@types/snowpack-env@^2.3.2":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@types/snowpack-env/-/snowpack-env-2.3.3.tgz#d2dfb1fb8557aa8bb517606d5dfa249cc861c3ff"
@@ -31,11 +26,6 @@ bplist-parser@^0.1.0:
   integrity sha1-1g1dzCDLptx+HymbNdPh+V2vuuY=
   dependencies:
     big-integer "^1.6.7"
-
-canvas-confetti@^1.2.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.4.0.tgz#840f6db4a566f8f32abe28c00dcd82acf39c92bd"
-  integrity sha512-S18o4Y9PqI/uabdlT/jI3MY7XBJjNxnfapFIkjkMwpz6qNxLFZOm2b22OMf4ZYDL9lpNWI+Ih4fEMVPwO1KHFQ==
 
 cross-spawn@^7.0.3:
   version "7.0.3"
@@ -203,6 +193,13 @@ rollup@^2.34.0:
   optionalDependencies:
     fsevents "~2.3.1"
 
+rxjs@^6.0.0:
+  version "6.6.6"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.6.tgz#14d8417aa5a07c5e633995b525e1e3c0dec03b70"
+  integrity sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
+  dependencies:
+    tslib "^1.9.0"
+
 shebang-command@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
@@ -237,6 +234,11 @@ strip-final-newline@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
+
+tslib@^1.9.0:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 typescript@^4.0.0:
   version "4.2.3"
