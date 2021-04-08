@@ -1,5 +1,7 @@
+import webTestRunnerPlugin from '@snowpack/web-test-runner-plugin';
+
 process.env.NODE_ENV = 'test';
 
-module.exports = {
-  plugins: [require('@snowpack/web-test-runner-plugin')()],
+export default {
+  plugins: [webTestRunnerPlugin()],
 };
