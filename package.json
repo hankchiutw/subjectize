@@ -8,7 +8,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "test": "web-test-runner src/**/*.spec.ts",
+    "test": "web-test-runner",
     "bump": "HUSKY=0 release-it --ci",
     "pub": "./scripts/publish.sh",
     "lint": "tsc --noEmit && yarn run eslint './src/**/*.{ts,tsx,js,jsx}'",
