@@ -111,4 +111,30 @@ describe('SubjectizeProps', () => {
       }
     });
   });
+
+  it('should work with initial values', (done) => {
+    const expectedValue = {
+      prop1: 99,
+      prop2: 'hello',
+    };
+    class Test {
+      public prop1: number = expectedValue.prop1;
+      public prop2: string = expectedValue.prop2;
+
+      @SubjectizeProps(['prop1', 'prop2'])
+      public prop12$ = new ReplaySubject<[string, number | string]>(2);
+    }
+
+    const obj = new Test();
+    let count = 0;
+    obj.prop12$.subscribe({
+      next: ([key, value]) => {
+        expect(value).equal(expectedValue[key]);
+        count++;
+        if (count === 2) {
+          done();
+        }
+      },
+    });
+  });
 });

@@ -72,4 +72,20 @@ describe('Subjectize', () => {
       done();
     });
   });
+
+  it('should work with initial value', (done) => {
+    const expectedValue = 100;
+    class Test {
+      public prop1 = expectedValue;
+
+      @Subjectize('prop1')
+      public prop1$ = new ReplaySubject<number>(1);
+    }
+
+    const obj = new Test();
+    obj.prop1$.subscribe((value) => {
+      expect(value).equal(expectedValue);
+      done();
+    });
+  });
 });

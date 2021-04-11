@@ -1,3 +1,4 @@
+import type { Subject } from 'rxjs';
 import { extendPropertyAccessor } from '../utils/extendPropertyAccessor';
 
 /**
@@ -14,10 +15,22 @@ import { extendPropertyAccessor } from '../utils/extendPropertyAccessor';
  * public someProp$ = new ReplaySubject<SomeProp>(1);
  * ```
  */
-export function Subjectize(keyToWatch: string): PropertyDecorator {
+export function Subjectize<T>(keyToWatch: string): PropertyDecorator {
   return (proto: unknown, propKey: string) => {
+    // emit current value when initializing the Subject
+    extendPropertyAccessor(proto, propKey, {
+      set(value: Subject<T>) {
+        if (this[keyToWatch] !== undefined) {
+          value.next(this[keyToWatch]);
+        }
+      },
+    });
+
     extendPropertyAccessor(proto, keyToWatch, {
       set: function (value: unknown) {
+        if (this[propKey] === undefined) {
+          return;
+        }
         this[propKey].next(value);
       },
     });
