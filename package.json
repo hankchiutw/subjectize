@@ -8,9 +8,10 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
+    "postbuild": "tsc --emitDeclarationOnly --outDir dist",
     "test": "web-test-runner",
     "bump": "HUSKY=0 release-it --ci",
-    "pub": "./scripts/publish.sh",
+    "pub": "yarn publish --cwd dist",
     "lint": "tsc --noEmit && yarn run eslint './src/**/*.{ts,tsx,js,jsx}'",
     "lint:fix": "yarn lint --fix && pretty-quick --staged",
     "_postinstall": "husky install",
